@@ -1,5 +1,5 @@
-df call(String Project, String ImageTag, String dockerhubuser) {
-  withCrediential([usernamePassword(credientialsId: 'docker', passwordVariable: 'dockerhubpass', usernameVariable: 'dockerhubuser')]) {
+df call(String Project, String ImageTag, String dockerHubUser) {
+  withCrediential([usernamePassword(credientialsId: 'dockerHubCred', passwordVariable: 'dockerHubPass', usernameVariable: 'dockerHubUser')]) {
  sh "docker login -u ${dockerhubuser} -p ${dockerhubpass}"
   
   }
